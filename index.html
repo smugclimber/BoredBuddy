@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>BoredBuddy Home</title>
+    <link rel="shortcut icon" href="./images/bored_funcon.png" type="image/vnd.microsoft.icon">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Compiled and minified Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cagliostro" rel="stylesheet">
+<!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+  </head>
+  <body>
+<!-- Nav Bar //Header Bar -->
+    <div id="top">
+    </div>
+    <nav class="light lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">BoredBuddy</a><a href="./"><img src="./images/bored_funcon.png" alt="missing img" height="60px" width="60px" style="padding-top:5px; margin-left: -50px;"></a>
+        <ul class="right hide-on-med-and-down">
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+        </ul>
+      </div>
+    </nav>
+    <div class="container mainFunc">
+<!-- Title Row -->
+<!-- Section 1 ----------------------------------------------------------------------------->
+      <div class="row" id="section1">
+        <div class="row center">
+          <h1 class="offset-m2 col m8 header flow-text">Let's get Bored!</h1>
+        </div>
+        <!-- Search Row -->
+        <div class="row center">
+          <div class="col-md-12">
+            <h5 class="header light flow-text">Boardgame Title: </h5>
+          </div>
+        </div>
+        <div class="row center" style="margin-top: -40px;">
+          <div class="col s5">
+          </div>
+          <div class="input-field col m2">
+            <input placeholder="Type Here" id="name" type="text" class="validate center">
+          </div>
+          <div class="col s5">
+          </div>
+        </div>
+        <div class="row center">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn search flow-text" id="search" href="#result">Search</a>
+          </div>
+        </div>
+<!-- Additional Captions -->
+        <div class="row center">
+         <div class="col s12">
+           <br>
+           <h5 class="header light flow-text">Or let our app help you choose a board game!</h5>
+           <br>
+           <h5 class="header light flow-text" style="margin-top: -25px;">Pick your prefrences:</h5>
+         </div>
+        </div>
+<!-- Preference Drop down -->
+        <div class="row center">
+          <div class="input-field col s12">
+            <select id ='q1'>
+              <option value="" disabled selected>How many players?</option>
+              <option value="1">One(1)</option>
+              <option value="2">Two(2)</option>
+              <option value="3">Three(3)</option>
+              <option value="4">Four(4)</option>
+              <option value="5">Five(5)</option>
+              <option value="6">Six(6)</option>
+              <option value="7">More than Seven(7+)</option>
+            </select>
+
+          </div>
+          <div class="input-field col s12">
+            <select id = 'q2'>
+              <option value="" disabled selected>Time Duration?</option>
+              <option value="15">15 mins or less</option>
+              <option value="30">30 mins</option>
+              <option value="60">1hr or less</option>
+              <option value="120">2hr or less</option>
+              <option value="180">3hr or more</option>
+            </select>
+
+          </div>
+          <div class="input-field col s12">
+            <select id = 'q3'>
+              <option value="" disabled selected>What Type/Genre?</option>
+              <option value="Dice">Dice based games</option>
+              <option value="Card">Card games</option>
+              <option value="Economic">Economic games</option>
+              <option value="Role Playing">Role Playing games</option>
+              <option value="Strategy">Strategy games</option>
+              <option value="Party">Party games</option>
+            </select>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div class="row" id="hide">
+          <div class="row center">
+            <div class="col s12">
+              <div id="hide">
+
+              </div>
+              <a href="#hide"><button id="hide" class="input-group-addon waves-effect waves-light btn searchPref center">Pref Search</button></a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end of sect 1 -->
+<!-- APi information goes here - section 2 ------------------------------------------------------------------------------------------------>
+
+<!-- Below is the dynamically created Matches -->
+        <div class="row" id="matches-1">
+        </div>
+<!-- Above is the dynamically created Matches -->
+
+      <div class="row" id="matches-1">
+        <div class="col s12 m12" id="section2">
+<!-- BGG Information -->
+          <div class="row" id="gameInfo" style="margin-top:-65px;">
+            <br><br>
+            <h1 class="header center orange-text flow-text" id="result">Your Game Choice:</h1>
+            <div class="row">
+              <div class="col s5 m5">
+                <img class="responsive-img" id="gameImage" src="./images/placeholder.png" alt="missing img">
+              </div>
+              <div class="col s7 m7">
+                <div class="row">
+                  <div class="col s5 m5 flow-text">
+                    <h5 class="header col s12 light flow-text">Game Title:</h5>
+                    <h5 class="header col s12 light flow-text">Game Cat/Genre:</h5>
+                    <h5 class="header col s12 light flow-text">Min Players:</h5>
+                    <h5 class="header col s12 light flow-text">Max Players:</h5>
+                    <h5 class="header col s12 light flow-text">Game Time Est:</h5>
+                    <h5 class="header col s12 light flow-text">Description:</h5>
+                  </div>
+                  <div class="col s7 m7 flow-text">
+                    <h5 class="header col s12 light flow-text" id="gameTitle">UNKNOWN</h5>
+                    <h5 class="header col s12 light flow-text" id="gameCat">UNKNOWN</h5>
+                    <h5 class="header col s12 light flow-text" id="minPlayers">UNKNOWN</h5>
+                    <h5 class="header col s12 light flow-text" id="maxPlayers">UNKNOWN</h5>
+                    <h5 class="header col s12 light flow-text" id="gameTime">UNKNOWN</h5>
+                    <h5 class="header col s12 light flow-text"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 m12 flow-text" style="margin-top:-35px">
+                    <h5 class="header col s12 light flow-text" id="description">UNKNOWN</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br><br>
+          </div>
+<!-- For video reviews -->
+          <div class="row  video-container" id="videoReview">
+
+          </div>
+          <br>
+<!-- Amazon Links -->
+          <div class="row" id="amazonReview">
+
+          </div>
+          <br>
+          <br>
+
+        </div>
+      </div>
+<!-- <Button Section ------------------------------------------------------------------------------------------->
+      <div class="row center">
+        <div class="col s12">
+          <a href="#top"><button id="reset" class="input-group-addon waves-effect waves-light btn center">Reset</button></a>
+        </div>
+      </div>
+    </div><!-- End of Container -->
+<!-- Start of Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Company Biography</h5>
+            <p class="grey-text text-lighten-4">We are a team of 2017 Bootcamp students, hungry to create. This project is completely free to the public and can be used for any purposes within the limits of the law.</p>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Developers</h5>
+            <ul>
+              <li><a class="white-text" >Sam Cho</a></li>
+              <li><a class="white-text" href="http://www.atomicnick.com">Nick Hall</a></li>
+              <li><a class="white-text" >Perla Showell</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text" href="https://github.com/samhkcho">GitHub/Sam</a></li>
+              <li><a class="white-text" href="https://github.com/smugclimber">GitHub/Nick</a></li>
+              <li><a class="white-text" href="https://github.com/pshowell">GitHub/Perla</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="index.html">BoredBuddy Inc.</a>
+        </div>
+      </div>
+    </footer>
+<!--  Scripts-->
+    <script type="text/javascript">
+///////////SCRIPT FOR BOARDGAME TITLE SEARCH/////////
+      $("#section2").hide();
+      function getWords(str)
+      {
+      return str.split(/\s+/).slice(0,70).join(" ");
+      }
+
+    $("#search").on("click", function(event){
+      $("#hide").hide();
+      $("#section1").hide();
+      $("#section2").show();
+///////////BGG api//////////////////////////////////
+      event.preventDefault();
+      var searchTerm = {name: $("#name").val().trim()};
+      console.log("Term created as: " + searchTerm.name);
+      if(searchTerm.name == "")
+      {
+        alert("Fill in a game title before submitting");
+      }else
+      {
+      $.post("/api/new", searchTerm).done(function(data){
+          var gameInfo = data;
+          var str = gameInfo.description
+          var abridgeDescript = getWords(str);
+          $("#gameTitle").text(gameInfo.name);
+          $("#gameCat").text(gameInfo.mechanics[0]);
+          $("#minPlayers").text(gameInfo.minPlayers);
+          $("#maxPlayers").text(gameInfo.maxPlayers);
+          $("#gameTime").text(gameInfo.playingTime + " mins");
+          $("#description").text(abridgeDescript + " ...");
+          $("#gameImage").attr("src",gameInfo.image);
+
+        });
+      }
+////////////////Youtube api//////////////////////////
+
+      $.post("/api/youtube", searchTerm).done(function(data){
+        console.log(data.url1);
+        console.log(data.url2);
+        var video1 = $("<iframe>");
+        video1.attr("src", data.url1);
+        video1.attr("id", "ytplayer");
+        video1.attr("height", "315");
+        video1.addClass("col s6 m6");
+        var video2 = $("<iframe>");
+        video2.attr("src", data.url2);
+        video2.attr("id", "ytplayer");
+        video2.attr("height", "315");
+        video2.addClass("col s6 m6");
+        $("#videoReview").append(video1);
+        $("#videoReview").append(video2);
+      });
+
+////////////////youtube api//////////////////////////
+
+////////////////Amazon api//////////////////////////
+      $.post("/api/amazon", searchTerm).done(function(data){
+        console.log(data);
+        var headlineProduct = $('<h4 class="header center orange-text flow-text>');
+        var review1 = $("<a>");
+        var buy1 = $("<a>");
+        review1.attr("href", data.reviewLink);
+        buy1.attr("href", data.buyLink);
+            // <iframe src="reviews_iframe_url" />
+        review1.text("Link to Amazon Reviews!");
+        buy1.text("Link to Amazon!");
+        headlineProduct.text(data.name);
+        headlineProduct.addClass("center");
+        review1.addClass("col s3 m3 offset-m3 center");
+        buy1.addClass("col s3 m3 center");
+        $("#amazonReview").append(headlineProduct);
+        $("#amazonReview").append(review1);
+        $("#amazonReview").append(buy1);
+      });
+////////////////Amazon api//////////////////////////
+    })
+    // Reset Button
+    $("#reset").on("click", function(event){
+      $("#videoReview").empty();
+      $("#amazonReview").empty();
+      $("#section1").show();
+      $("#section2").hide();
+      $("#hide").show();
+      $("#matches").hide();
+    })
+////////////SCRIPT FOR PREFERENCE BASED BOARDGAME SEARCH/////
+      $(".searchPref").on("click", function(event)
+      {
+        $("#section1").hide();
+        $("#matches").show();
+  			event.preventDefault();
+        if($("#q1").val() === null || $("#q2").val() === null || $("#q3").val() === null){
+          alert("No input for prefs. Please choose something!")
+        }else
+        {
+          var searchPref = {playerPref: $("#q1").val().trim()};
+          searchPref.timePref = $("#q2").val().trim();
+          searchPref.genrePref = $("#q3").val().trim();
+          console.log("# of Players desired: " + searchPref.playerPref);
+          console.log("Time restraints desired: " + searchPref.timePref);
+          console.log("Game genre desired: " + searchPref.genrePref);
+          if(searchPref.playerPref == "")
+          {
+            alert("Fill in a # of players before submitting");
+          }else if(searchPref.timePref == "")
+          {
+            alert("Fill in a # of players before submitting");
+          }else if(searchPref.genrePref == "")
+          {
+            alert("Fill in a # of players before submitting");
+          }
+          else
+          {
+            $.post("/api/pref", searchPref).done(function(data)
+            {
+              var prefInfo = data;
+              console.log((data === false), 'testing server breakage');
+              console.log("Data before if: "+JSON.stringify(data));
+              console.log("Data type before if: "+ typeof(data));
+              var x = 0;
+              if(JSON.stringify(data) === "[]"){
+                alert("No Matches!!");
+              }else{
+                var titleCol12 = $("<div>")
+                titleCol12.addClass("col s12 m12 center");
+                titleCol12.attr("id", "titleCol12");
+                $("#matches-1").prepend(titleCol12);
+                $("#titleCol12").append('<h5 class="header center orange-text flow-text">'+"Best Matches:"+"</h1>");
+
+                for(var i=0; i<data.length; i++){
+                  $.post("/api/new", data[i]).done(function(data)
+                  {
+                    x++;
+                    console.log("Your res obj name:" + data.name);
+                    console.log("Your res obj i:" + x);
+                    var str = data.description
+                    var abridgeDescript = getWords(str);
+////////////////// Dynamically create match rows and columns///////
+                    var matchCol5 = $("<div>")
+                    matchCol5.addClass("col s5 m5");
+                    matchCol5.attr("id", "matchCol5-" + x);
+                    $("#matches-" + x).append(matchCol5);
+                    $("#matchCol5-" + x).html('<img class="responsive-img" src="'+data.image +'" alt="missing img">');
+
+                    var matchCol7 = $("<div>")
+                    matchCol7.addClass("col s7 m7");
+                    matchCol7.attr("id", "matchCol7-" + x);
+                    $("#matches-" + x).append(matchCol7);
+
+                    var matchRowInfo = $("<div>")
+                    matchRowInfo.addClass("row");
+                    matchRowInfo.attr("id", "matchRowInfo-" + x);
+                    $("#matchCol7-" + x).append(matchRowInfo);
+
+                    var matchCol12Cont = $("<div>")
+                    matchCol12Cont.addClass("col s12 m12");
+                    matchCol12Cont.attr("id", "matchCol12Cont-" + x);
+                    $("#matchRowInfo-" + x).append(matchCol12Cont);
+
+                    $("#matchCol12Cont-" + x).append('<h5 class="flow-text">'+"Game Title:   "+data.name+"</h5>");
+                    $("#matchCol12Cont-" + x).append('<h5 class="flow-text">'+"Game Cat/Genre:   "+data.mechanics+"</h5>");
+                    $("#matchCol12Cont-" + x).append('<h5 class="flow-text">'+"Min Players:   "+data.minPlayers+"</h5>");
+                    $("#matchCol12Cont-" + x).append('<h5 class="flow-text">'+"Max Players:   "+data.maxPlayers+"</h5>");
+                    $("#matchCol12Cont-" + x).append('<h5 class="flow-text">'+"Game Time Est:   "+data.playingTime+"</h5>");
+                    $("#matchCol12Cont-" + x).append('<h5 class="flow-text">'+"Description:"+"</h5>");
+
+                    var matchRowDesc = $("<div>")
+                    matchRowDesc.addClass("row");
+                    matchRowDesc.attr("id", "matchRowDesc-" + x);
+                    $("#matchCol7-" + x).append(matchRowDesc);
+
+                    var matchCol12Desc = $("<div>")
+                    matchCol12Desc.addClass("col s12 m12 flow-text");
+                    matchCol12Desc.attr("id", "matchCol12Desc-" + x);
+                    $("#matchRowDesc-" + x).append(matchCol12Desc);
+
+                    $("#matchCol12Desc-" + x).append('<h5 class="flow-text">'+ abridgeDescript + " ..." +"</h5>");
+
+                    var newMatch = $("<div>")
+                    newMatch.addClass("row");
+                    newMatch.attr("id", "matches-" + (x+1));
+                    $("#matches-" + (x)).after(newMatch);
+                    $("#matches-" + (x+1)).prepend('<hr>');
+                    $("#matches-" + (x+1)).prepend('<br>');
+                  }); //second post ends
+                }; //for loop ends
+              } //else ends
+            }); //first post ends
+            };
+          }//end of first else
+      });
+      // For drop down dont delete
+        $(document).ready(function() {
+          $('select').material_select();
+          $("#section2").hide();
+          $("#matches").hide();
+        });
+    </script>
+  </body>
+</html>
