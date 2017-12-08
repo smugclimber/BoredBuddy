@@ -5,14 +5,27 @@
  *
  * Made By MaterializeCSS.com
  */
+body {
+  background-image: url("./images/purty_wood/purty_wood.png");
+  background-color:white;
+  border-radius: 25px;
+  border:1px;
+}
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
 h1 {
+  font-family: 'Peralta', cursive;
+  color: #FC4A1A;
+}
+
+.btn-small {
+    height: 22px;
+    background-color: lightblue;
+    line-height: 20px;
+    padding: 0 0.2rem;
+    font-size: 9pt;
+}
+
+.mainTitle {
   font-family: 'Peralta', cursive;
   color: #FC4A1A;
 }
@@ -21,27 +34,42 @@ h5 {
   font-family: 'Cabin Sketch', cursive;
 }
 
-#search {
-  font-family: 'Orbitron', sans-serif;
+.icon-block {
+  padding: 0 15px;
 }
-
-#logo-container {
-  font-family: 'Fascinate Inline', cursive;
-}
-
-body {
-  /*background-image: url("./images/fabric_plaid/fabric_plaid.png");*/
-       background-image: url("./images/purty_wood/purty_wood.png");
-  background-color:white;
-   border-radius: 25px;
-   border:1px;
-   /*background-color:red;*/
-   /*background-color: #cccccc;*/
+.icon-block .material-icons {
+	font-size: inherit;
 }
 
 .light-1 {
   background-color: #F7B733;
 }
+
+.page-footer {
+  background-color: #4ABDAC;
+}
+
+.login-box {
+  height: 100%;
+}
+
+.mainFunc {
+  background-color:FloralWhite;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 70%;
+}
+@media only screen and (min-width: 320px)
+  .container {
+    width: 95%;
+  }
+@media only screen and (min-width: 768px)
+  .container {
+    width: 85%;
+  }
 
 #hide {
   font-family: 'Orbitron', sans-serif;
@@ -51,15 +79,10 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-.page-footer {
-  background-color: #4ABDAC;
+#search {
+  font-family: 'Orbitron', sans-serif;
 }
 
-.mainFunc {
-     /*background-image: url("./images/purty_wood/purty_wood.png");*/
-       /*background-image: url("./images/fabric_plaid/fabric_plaid.png");*/
-       background-color:FloralWhite;
-  padding-left:100px;
-  padding-right:100px;
-  padding-bottom:100px;
+#logo-container {
+  font-family: 'Fascinate Inline', cursive;
 }

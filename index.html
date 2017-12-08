@@ -40,150 +40,137 @@
 <!-- Title Row -->
 <!-- Section 1 ----------------------------------------------------------------------------->
       <div class="row" id="section1">
-        <div class="row center">
-          <h1 class="offset-m2 col m8 header flow-text">Let's get Bored!</h1>
-        </div>
-        <!-- Search Row -->
-        <div class="row center">
-          <div class="col-md-12">
-            <h5 class="header light flow-text">Boardgame Title: </h5>
+        <div class="row">
+          <div class="col-md-12 center">
+            <h1 class="offset-l2 col m8 header center hide-on-small-only">Let's get Bored!</h1>
+            <h5 class="offset-s1 col m8 header center hide-on-med-and-up mainTitle">Let's get Bored!</h5>
           </div>
         </div>
-        <div class="row center" style="margin-top: -40px;">
-          <div class="col s5">
-          </div>
-          <div class="input-field col m2">
-            <input placeholder="Type Here" id="name" type="text" class="validate center">
-          </div>
-          <div class="col s5">
-          </div>
-        </div>
-        <div class="row center">
-          <div class="col s12">
-            <a class="waves-effect waves-light btn search flow-text" id="search" href="#result">Search</a>
+        <h5 class="header light center hide-on-small-only" style="margin-top: -20px;">Let BoredBuddy provide all your boardgame night needs.</h5>
+        <h5 class="header light center hide-on-med-and-up" style="font-size: 10pt; margin-top: -20px;">Let BoredBuddy provide all your boardgame night needs.</h5>
+        <!-- Search Button area -->
+        <div class="valign-wrapper row login-box">
+          <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+            <form>
+              <p class="card-title light center" style="font-size: 14pt;">Boardgame Title: </p>
+              <div class="row">
+                <div class="col s12">
+                  <label for="name"></label>
+                  <input placeholder="Type Here" type="text" class="validate center" name="name" id="name" />
+                </div>
+              </div>
+              <div class="center-align">
+                <input type="submit" id="search" class="btn-small waves-effect waves-light" value="Search" href="#result">
+              </div>
+            </form>
           </div>
         </div>
 <!-- Additional Captions -->
         <div class="row center">
          <div class="col s12">
+           <h5 class="header light hide-on-small-only" style="margin-top: -15px;">Or let us find one!</h5>
+           <h5 class="header light hide-on-med-and-up" style="font-size: 10pt; margin-top: -15px;">Or let us find one!</h5>
            <br>
-           <h5 class="header light flow-text">Or let our app help you choose a board game!</h5>
-           <br>
-           <h5 class="header light flow-text" style="margin-top: -25px;">Pick your prefrences:</h5>
+           <h5 class="header light hide-on-small-only" style="margin-top: -25px;">Pick your prefrences:</h5>
+           <h5 class="header light hide-on-med-and-up" style="font-size: 10pt; margin-top: -25px;">Pick your prefrences:</h5>
          </div>
         </div>
 <!-- Preference Drop down -->
-        <div class="row center">
-          <div class="input-field col s12">
-            <select id ='q1'>
-              <option value="" disabled selected>How many players?</option>
-              <option value="1">One(1)</option>
-              <option value="2">Two(2)</option>
-              <option value="3">Three(3)</option>
-              <option value="4">Four(4)</option>
-              <option value="5">Five(5)</option>
-              <option value="6">Six(6)</option>
-              <option value="7">More than Seven(7+)</option>
-            </select>
-
-          </div>
-          <div class="input-field col s12">
-            <select id = 'q2'>
-              <option value="" disabled selected>Time Duration?</option>
-              <option value="15">15 mins or less</option>
-              <option value="30">30 mins</option>
-              <option value="60">1hr or less</option>
-              <option value="120">2hr or less</option>
-              <option value="180">3hr or more</option>
-            </select>
-
-          </div>
-          <div class="input-field col s12">
-            <select id = 'q3'>
-              <option value="" disabled selected>What Type/Genre?</option>
-              <option value="Dice">Dice based games</option>
-              <option value="Card">Card games</option>
-              <option value="Economic">Economic games</option>
-              <option value="Role Playing">Role Playing games</option>
-              <option value="Strategy">Strategy games</option>
-              <option value="Party">Party games</option>
-            </select>
-
-          </div>
-          <div>
+        <div class="row" style="margin-top: -100px;">
+          <div class="col s12">
+            <div class="offset-l4 input-field col s10 m4 l4 offset-s1">
+              <select id ='q1'>
+                <option value="" disabled selected># of Players?</option>
+                <option value="1">One(1)</option>
+                <option value="2">Two(2)</option>
+                <option value="3">Three(3)</option>
+                <option value="4">Four(4)</option>
+                <option value="5">Five(5)</option>
+                <option value="6">Six(6)</option>
+                <option value="7">More than Seven(7+)</option>
+              </select>
+            </div>
           </div>
         </div>
+        <div class="row" style="margin-top: -100px;">
+          <div class="col s12">
+            <div class="offset-l4 input-field col s10 m4 l4 offset-s1">
+              <select id = 'q2'>
+                <option value="" disabled selected>Time Duration?</option>
+                <option value="15">15 mins or less</option>
+                <option value="30">30 mins</option>
+                <option value="60">1hr or less</option>
+                <option value="120">2hr or less</option>
+                <option value="180">3hr or more</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: -100px;">
+          <div class="col s12">
+            <div class="offset-l4 input-field col s10 m4 l4 offset-s1">
+              <select id = 'q3'>
+                <option value="" disabled selected>Type/Genre?</option>
+                <option value="Dice">Dice based games</option>
+                <option value="Card">Card games</option>
+                <option value="Economic">Economic games</option>
+                <option value="Role Playing">Role Playing games</option>
+                <option value="Strategy">Strategy games</option>
+                <option value="Party">Party games</option>
+              </select>
+            </div>
+          </div>
+        </div><!-- End of pref drop down -->
         <div class="row" id="hide">
           <div class="row center">
             <div class="col s12">
               <div id="hide">
-
+                <a href="#hide"><button id="hide" class="btn-small waves-effect waves-light searchPref">Pref Search</button></a>
               </div>
-              <a href="#hide"><button id="hide" class="input-group-addon waves-effect waves-light btn searchPref center">Pref Search</button></a>
             </div>
           </div>
         </div>
       </div> <!-- end of sect 1 -->
 <!-- APi information goes here - section 2 ------------------------------------------------------------------------------------------------>
-
 <!-- Below is the dynamically created Matches -->
-        <div class="row" id="matches-1">
-        </div>
-<!-- Above is the dynamically created Matches -->
-
       <div class="row" id="matches-1">
-        <div class="col s12 m12" id="section2">
-<!-- BGG Information -->
-          <div class="row" id="gameInfo" style="margin-top:-65px;">
-            <br><br>
-            <h1 class="header center orange-text flow-text" id="result">Your Game Choice:</h1>
-            <div class="row">
-              <div class="col s5 m5">
-                <img class="responsive-img" id="gameImage" src="./images/placeholder.png" alt="missing img">
-              </div>
-              <div class="col s7 m7">
-                <div class="row">
-                  <div class="col s5 m5 flow-text">
-                    <h5 class="header col s12 light flow-text">Game Title:</h5>
-                    <h5 class="header col s12 light flow-text">Game Cat/Genre:</h5>
-                    <h5 class="header col s12 light flow-text">Min Players:</h5>
-                    <h5 class="header col s12 light flow-text">Max Players:</h5>
-                    <h5 class="header col s12 light flow-text">Game Time Est:</h5>
-                    <h5 class="header col s12 light flow-text">Description:</h5>
-                  </div>
-                  <div class="col s7 m7 flow-text">
-                    <h5 class="header col s12 light flow-text" id="gameTitle">UNKNOWN</h5>
-                    <h5 class="header col s12 light flow-text" id="gameCat">UNKNOWN</h5>
-                    <h5 class="header col s12 light flow-text" id="minPlayers">UNKNOWN</h5>
-                    <h5 class="header col s12 light flow-text" id="maxPlayers">UNKNOWN</h5>
-                    <h5 class="header col s12 light flow-text" id="gameTime">UNKNOWN</h5>
-                    <h5 class="header col s12 light flow-text"></h5>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col s12 m12 flow-text" style="margin-top:-35px">
-                    <h5 class="header col s12 light flow-text" id="description">UNKNOWN</h5>
-                  </div>
-                </div>
-              </div>
+      </div>
+  <!-- Above is the dynamically created Matches -->
+      <div class="row" id="section2">
+      	<div class="col s12">
+            <h1 class="offset-l2 col m8 header center hide-on-small-only" style="margin-top: -15px;" id="result">Your Game Choice:</h1>
+            <h5 class="col m8 header center hide-on-med-and-up mainTitle" style="margin-top: -15px;" id="result">Your Game Choice:</h5>
+        </div>
+        <div class="row descript">
+          <div class="col m8 l6">
+            <img class="responsive-img center" id="gameImage" src="./images/placeholder.png" alt="missing img"/>
+            <div class="col s5 m5">
+              <h5 class="header col s12 light">Game Title:</h5><h5 class="header col s12 light" id="gameTitle">UNKNOWN</h5>
+              <h5 class="header col s12 light">Game Cat/Genre:</h5><h5 class="header col s12 light" id="gameCat">UNKNOWN</h5>
+              <h5 class="header col s12 light">Min Players:</h5><h5 class="header col s12 light" id="minPlayers">UNKNOWN</h5>
+              <h5 class="header col s12 light">Max Players:</h5><h5 class="header col s12 light" id="maxPlayers">UNKNOWN</h5>
+              <h5 class="header col s12 light">Game Time Est:</h5><h5 class="header col s12 light" id="gameTime">UNKNOWN</h5>
             </div>
-            <br><br>
           </div>
-<!-- For video reviews -->
+          <div class="col m4 l6">
+            <h5 class="header col s12 light flow-text">Description:</h5>
+            <br>
+            <h5 class="header col s12 light flow-text" id="description">UNKNOWN</h5>
+          </div>
+        </div>
+      </div>
+  <!-- For video reviews -->
           <div class="row  video-container" id="videoReview">
 
           </div>
           <br>
-<!-- Amazon Links -->
+  <!-- Amazon Links -->
           <div class="row" id="amazonReview">
 
           </div>
           <br>
           <br>
-
-        </div>
-      </div>
-<!-- <Button Section ------------------------------------------------------------------------------------------->
+<!-- <Button Section --------------------------------------------------------------->
       <div class="row center">
         <div class="col s12">
           <a href="#top"><button id="reset" class="input-group-addon waves-effect waves-light btn center">Reset</button></a>
@@ -232,30 +219,29 @@
       }
 
     $("#search").on("click", function(event){
-      $("#hide").hide();
-      $("#section1").hide();
-      $("#section2").show();
 ///////////BGG api//////////////////////////////////
       event.preventDefault();
       var searchTerm = {name: $("#name").val().trim()};
       console.log("Term created as: " + searchTerm.name);
-      if(searchTerm.name == "")
+      if(searchTerm.name === "")
       {
         alert("Fill in a game title before submitting");
       }else
       {
-      $.post("/api/new", searchTerm).done(function(data){
-          var gameInfo = data;
-          var str = gameInfo.description
-          var abridgeDescript = getWords(str);
-          $("#gameTitle").text(gameInfo.name);
-          $("#gameCat").text(gameInfo.mechanics[0]);
-          $("#minPlayers").text(gameInfo.minPlayers);
-          $("#maxPlayers").text(gameInfo.maxPlayers);
-          $("#gameTime").text(gameInfo.playingTime + " mins");
-          $("#description").text(abridgeDescript + " ...");
-          $("#gameImage").attr("src",gameInfo.image);
-
+        $("#hide").hide();
+        $("#section1").hide();
+        $("#section2").show();
+        $.post("/api/new", searchTerm).done(function(data){
+            var gameInfo = data;
+            var str = gameInfo.description
+            var abridgeDescript = getWords(str);
+            $("#gameTitle").text(gameInfo.name);
+            $("#gameCat").text(gameInfo.mechanics[0]);
+            $("#minPlayers").text(gameInfo.minPlayers);
+            $("#maxPlayers").text(gameInfo.maxPlayers);
+            $("#gameTime").text(gameInfo.playingTime + " mins");
+            $("#description").text(abridgeDescript + " ...");
+            $("#gameImage").attr("src",gameInfo.image);
         });
       }
 ////////////////Youtube api//////////////////////////
