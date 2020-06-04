@@ -55,6 +55,13 @@ app.post("/api/new", function(req, res) {
    var newTerm = req.body.name;
    console.log("New search term is: " +newTerm);
   //BGG Search function
+
+  var default_game = '<boardgames termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">' + "\n"
+  + '<boardgame objectid="187127">' + "\n"
+  + '<name primary="true">Back to the Future Monopoly</name>' + "\n"
+  + '<yearpublished>2015</yearpublished>' + "\n"
+  + '</boardgames>';
+
     var gameId = 0;
     var getIdUrl = "https://www.boardgamegeek.com/xmlapi/search?search=" + newTerm + "&exact=1";
 
@@ -65,7 +72,11 @@ app.post("/api/new", function(req, res) {
           var xmlGarbage = JSON.stringify(body);
           console.log(xmlGarbage + "\n=============End of Garbage XML ===========");
           var resultArr = xmlGarbage.split(" ");
-          var gameArr = resultArr[2].split('"', 2);
+          if (typeof variable !== 'undefined') {
+            var gameArr = resultArr[2].split('"', 2);
+          } else {
+            var gameArr = default_game;
+          }
           gameId = gameArr[1];
           console.log("ID is: "+ gameId);
           resolve(gameId);
